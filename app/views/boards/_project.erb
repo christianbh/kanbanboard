@@ -1,0 +1,17 @@
+
+<% if project.nil?%> <div class="roundedcornr_box vacant_box"> 
+	<div class="roundedcornr_content"> 
+		Ledig Plass! 
+	</div>
+
+</div>
+<% else %>
+<%project_id = "project_#{project.id}" %>
+<div class="roundedcornr_box draggable" id='<%=project_id%>'>
+	<div class="roundedcornr_content">
+		<%= link_to project.name, board_task_path(@board, project) %>
+	</div>
+<%= draggable_element(project_id, :revert => "'failure'") %>
+</div>
+
+<% end %>

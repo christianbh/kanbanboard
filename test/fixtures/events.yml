@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  details: MyString
+  start: 2009-11-17
+  end: 2009-11-17
+  span: false
+
+two:
+  title: MyString
+  details: MyString
+  start: 2009-11-17
+  end: 2009-11-17
+  span: false

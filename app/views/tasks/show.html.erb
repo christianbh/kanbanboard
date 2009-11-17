@@ -1,0 +1,25 @@
+<h1>Information for <%= @task.name %></h1>
+
+<p>
+  <b>Name:</b>
+  <%=h @task.name %>
+</p>
+<p>
+	<b>Set task to done:</b>
+	<%= button_to 'Done', done_board_task_path(:board_id => @board, :project => @task), :confirm => 'Are you sure?', :method => :done %>
+</p>
+<p>
+  <b>Description:</b>
+  <%=h @task.description %>
+</p>
+<p>
+  <b>How does this add value:</b>
+  <%=h @task.value %>
+</p>
+<p>
+  <b>Consequence if not done:</b>
+  <%=h @task.consequence %>
+</p>
+
+<%= link_to 'Edit', edit_board_task_path(@board, @task) %> |
+<%= link_to 'Back', board_path(@board) %> |

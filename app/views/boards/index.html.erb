@@ -1,0 +1,18 @@
+<h1>Boards#index</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Concurrenttasks</th>
+  </tr>
+
+<% for board in @boards %>
+  <tr>
+    <td><%=h board.name %></td>
+    <td><%=h board.concurrenttasks %></td>
+    <td><%= link_to 'Show', board %></td>
+    <td><%= link_to 'Edit', edit_board_path(board) %></td>
+    <td><%= button_to 'Destroy', board, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to "New Board", new_board_path %>

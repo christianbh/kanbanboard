@@ -1,0 +1,19 @@
+<% form_for(@board) do |b| %>
+  <%= b.error_messages %>
+
+  <p>
+    <%= b.label :name %><br />
+    <%= b.text_field :name %>
+  </p>
+  <p>
+    <%= b.label :concurrenttasks %><br />
+    <%= b.text_field :concurrenttasks %>
+  </p>
+  <p>
+    <%= b.label :concurrentprojects %><br />
+    <%= b.text_field :concurrentprojects %>
+  </p>
+  <p>
+    <%= b.submit "Create" %>
+  </p>
+<% end %>
