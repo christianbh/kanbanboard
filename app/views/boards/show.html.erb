@@ -7,7 +7,7 @@
 		</p>
 		<div class="wrapper">
 			<div class="backlogbox">
-			
+			<div class="board">
 				<div class="droppzone" id="droppzone_backlog">
 					<h2>
 						Backlog
@@ -24,9 +24,11 @@
 					  :complete => "window.location.reload()"
 					)%>
 				</div>
+				</div>
 			</div>
-			<div class="projectbox">
-				<div class="board">
+			<div class="wrapper">
+				<div class="projectbox">
+					<div class="board">
 					<div class="droppzone" id="droppzone_in_work">
 						<h2>
 							In work
@@ -48,9 +50,9 @@
 					  :complete => "window.location.reload()"
 					)%>
 				</div>
-			</div>
-			<div class="projectbox">
-				<div class="board">
+				</div>
+				<div class="projectbox">
+					<div class="board">
 					<div class="droppzone" id="droppzone_prioritized">
 					<h2>
 						Prioritized
@@ -70,10 +72,10 @@
 					  :complete => "window.location.reload()"
 					)%>
 				</div>
+				</div>
+				<div style="clear: right"></div>
+				<div id="my-timeline" style="height: 150px; border: 1px solid #aaa; font-family: Courier New, Courier; font-size: 12px; "></div>
 			</div>
-		</div>
-		<p>
-			&nbsp;
-		</p>
+			</div>
 
 	

@@ -18,17 +18,17 @@ h2, h3 {
 
 .wrapper {
 	width:100%;
-	height: 390px;
+	margin: 1px;	
 }
 
 .backlogbox {
-	width: 20%;
+	width: 19%;
 	float: left;
 	padding: 1px;
 }
 
 .projectbox {
-	width: 39%;
+	width: 40%;
 	float: right;
 	padding: 1px;
 }
