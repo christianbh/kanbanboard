@@ -10,11 +10,11 @@
 			<div class="board">
 				<div class="droppzone" id="droppzone_backlog">
 					<h2>
-						Backlog
+						Sugggested
 					</h2>
 					<h3> Projects</h3>
 					<%= render :partial => "project", :collection => @new_projects%>
-					<h3>Tasks</h3>
+					<h3>Small Tasks</h3>
 					<%= render :partial => "project", :collection => @new_tasks%>
 					<%= drop_receiving_element('droppzone_backlog',
 					  :accept => 'roundedcornr_box',
@@ -38,7 +38,7 @@
 						</h3>
 						<%= render :partial => "project", :collection => @in_work_projects%>
 						<h3>
-							Tasks
+							Small Tasks
 						</h3>
 						<%=render :partial => "project", :collection => @in_work_tasks %>
 					</div>
@@ -61,7 +61,7 @@
 						Projects
 					</h3><%=render :partial => "project", :collection => @prioritized_projects %>
 					<h3>
-						Tasks
+						Small Tasks
 					</h3><%=render :partial => "project", :collection => @prioritized_tasks %>
 					</div>
 					<%= drop_receiving_element('droppzone_prioritized',
@@ -74,7 +74,7 @@
 				</div>
 				</div>
 				<div style="clear: right"></div>
-				<div id="my-timeline" style="height: 150px; border: 1px solid #aaa; font-family: Courier New, Courier; font-size: 12px; "></div>
+				<div class="calendar" id="my-timeline"></div>
 			</div>
 			</div>
 

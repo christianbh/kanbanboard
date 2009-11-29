@@ -1,18 +1,19 @@
-<h1>Boards#index</h1>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Concurrenttasks</th>
-  </tr>
+<h1>Kanbanboards</h1>
+
+<div class="wrapper">
+	<div class="centre">
 
 <% for board in @boards %>
-  <tr>
-    <td><%=h board.name %></td>
-    <td><%=h board.concurrenttasks %></td>
-    <td><%= link_to 'Show', board %></td>
-    <td><%= link_to 'Edit', edit_board_path(board) %></td>
-    <td><%= button_to 'Destroy', board, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+	<div class="roundedcornr_box">
+		<div class="roundedcornr_content">
+    	<strong><%= link_to board.name, board %></strong> 
+		<div class="right"> <%= button_to 'Delete', board, :confirm => 'Are you sure?', :method => :delete %></div>
+		</div>
+	</div>
+
 <% end %>
-</table>
+	</div>
+</div>
+
 <%= link_to "New Board", new_board_path %>
+<div class="calendar" id="my-timeline"></div>

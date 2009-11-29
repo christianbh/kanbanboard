@@ -21,6 +21,16 @@ h2, h3 {
 	margin: 1px;	
 }
 
+.centre {
+	width:40%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.right {
+	float: right;
+}
+
 .backlogbox {
 	width: 19%;
 	float: left;
@@ -41,7 +51,12 @@ h2, h3 {
 	margin: 10px;
 
 }
-
+.calendar {
+	height: 150px; 
+	border: 1px solid #aaa; 
+	font-family: Courier New, Courier; 
+	font-size: 12px;
+}
 
 pre {
   background-color: #eee;
