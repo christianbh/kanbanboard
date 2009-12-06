@@ -113,6 +113,9 @@ a:hover { color: #fff; background-color:#000; }
 .vacant_box {
 	background: #e4e5df;
 }
+.warning_box {
+	background: #FF4E23;
+}
 .roundedcornr_content { margin: 15px; }
 
 .droppzone {

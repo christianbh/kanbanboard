@@ -13,8 +13,22 @@
 						Sugggested
 					</h2>
 					<h3> Projects</h3>
+					<%if @board.max_projects <= @new_projects.size%>
+					<div class="roundedcornr_box warning_box">
+						<div class="roundedcornr_content"> 
+							There are now <%=@new_projects.size%> suggested projects. Realistically, some of these will never be done. The honest and efficient thing to do would be to delete and give feedback to those who suggested it. 
+						</div>	
+					</div>
+					<%end%>
 					<%= render :partial => "project", :collection => @new_projects%>
 					<h3>Small Tasks</h3>
+					<%if @board.max_tasks <= @new_tasks.size%>
+					<div class="roundedcornr_box warning_box">
+						<div class="roundedcornr_content"> 
+							There are now <%=@new_tasks.size%> suggested tasks. Realistically, some of these will never be done. The honest and efficient thing to do would be to delete and give feedback to those who suggested it. 
+						</div>	
+					</div>
+					<%end%>
 					<%= render :partial => "project", :collection => @new_tasks%>
 					<%= drop_receiving_element('droppzone_backlog',
 					  :accept => 'roundedcornr_box',
