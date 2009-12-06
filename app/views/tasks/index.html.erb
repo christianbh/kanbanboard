@@ -1,4 +1,4 @@
-<h1>Listing tasks for <%= @board.name %></h1>
+<h1>Listing done tasks for <%= @board.name %></h1>
 
 <table>
   <tr>
@@ -9,7 +9,6 @@
   <tr>
     <td><%=h task.name %></td>
     <td><%= link_to 'Show', board_task_path(@board, task) %></td>
-    <td><%= link_to 'Edit', edit_board_task_path(@board, task) %></td>
     <td><%= link_to 'Destroy', board_task_path(@board, task), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -17,4 +16,4 @@
 
 <br />
 
-<%= link_to 'New task', new_board_task_path(@board) %>
+<%= link_to 'Back to board', board_path(@board) %>

@@ -3,7 +3,7 @@
 			Board for <%=h @board.name %>
 		</h1>
 		<p>
-			&nbsp; <%= link_to 'New task', new_board_task_path(@board) %> | <%= link_to 'Edit', edit_board_path(@board) %> | <%= link_to 'Back', boards_path %> | <%= link_to 'Completed Projects & Tasks',  board_tasks_path(@board, :state => State::DONE) %>
+			&nbsp; <%= link_to 'New task', new_board_task_path(@board) %> | <%= link_to 'Edit Board', edit_board_path(@board) %> | <%= link_to 'All boards', boards_path %> | <%= link_to 'Completed Projects & Tasks',  board_tasks_path(@board, :state => State::DONE) %>
 		</p>
 		<div class="wrapper">
 			<div class="backlogbox">
