@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091117115139) do
+ActiveRecord::Schema.define(:version => 20091206151720) do
 
   create_table "boards", :force => true do |t|
     t.string   "name"
@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(:version => 20091117115139) do
     t.integer  "concurrentprojects"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "max_tasks",          :default => 12
+    t.integer  "max_projects",       :default => 6
   end
 
   create_table "events", :force => true do |t|

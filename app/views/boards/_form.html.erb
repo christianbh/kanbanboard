@@ -14,6 +14,14 @@
     <%= b.text_field :concurrentprojects %>
   </p>
   <p>
-    <%= b.submit "Create" %>
+    <%= b.label :max_projects %><br />
+    <%= b.text_field :max_projects %>
+  </p>
+  <p>
+    <%= b.label :max_tasks %><br />
+    <%= b.text_field :max_tasks %>
+  </p>
+  <p>
+    <%= b.submit "Create/Update" %>
   </p>
 <% end %>
