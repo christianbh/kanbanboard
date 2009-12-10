@@ -31,6 +31,10 @@ h2, h3 {
 	float: right;
 }
 
+.left {
+	float: left;
+}
+
 .backlogbox {
 	width: 19%;
 	float: left;
