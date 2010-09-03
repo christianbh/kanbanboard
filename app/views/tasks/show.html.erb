@@ -5,8 +5,16 @@
   <%=h @task.name %>
 </p>
 <p>
+  <b>Requested by / Contact:</b>
+  <%=h @task.requester %>
+</p>
+<p>
+  <b>Created:</b>
+  <%=h @task.created_at %>
+</p>
+<p>
 	<b>Set task to done:</b>
-	<%= button_to 'Done', done_board_task_path(:board_id => @board, :project => @task), :confirm => 'Are you sure?', :method => :done %>
+	<%= button_to 'Done', done_board_task_path(:board_id => @board, :project => @task), :confirm => 'This will set the status of this task to done. Are you sure?', :method => :done %>
 </p>
 <p>
   <b>Description:</b>
@@ -22,4 +30,4 @@
 </p>
 
 <%= link_to 'Edit', edit_board_task_path(@board, @task) %> |
-<%= link_to 'Back', board_path(@board) %> |
+<%= link_to 'Back to Board', board_path(@board) %> |

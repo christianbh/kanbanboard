@@ -28,11 +28,13 @@ function onLoad() {
         intervalUnit:   Timeline.DateTime.MONTH, 
         intervalPixels: 100
     }),
-    Timeline.createBandInfo({
+    Timeline.createBandInfo({  
 		eventSource:    eventSource,
         width:          "30%", 
         intervalUnit:   Timeline.DateTime.YEAR, 
-        intervalPixels: 200
+        intervalPixels: 200,
+		overview:       true
+
     })
   ];
 
