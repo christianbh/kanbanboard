@@ -10,7 +10,7 @@
 </p>
 <p>
   <b>Created:</b>
-  <%=h @task.created_at %>
+  <%=h @task.created_at.strftime("%b %d %Y") %>
 </p>
 <p>
 	<b>Set task to done:</b>
