@@ -136,6 +136,16 @@ background: #fff;
 	
 .draggable{cursor: -moz-grab;}
 
+.info {
+	background: #fff;
+	    border: 5px solid #ccc;
+	   -moz-border-radius:3ex;
+	   -webkit-border-radius:3ex;
+		padding: 3px;
+		margin: 3px;
+		text-align:center;
+	
+	 }
 .inputbox {
 	width: 31%;
 	float: left;

@@ -7,32 +7,42 @@
 <p>
   <b>Requested by / Contact:</b>
   <%=h @task.requester %>
-</p>
-<p>
+|
   <b>Created:</b>
   <%=h @task.created_at.strftime("%b %d %Y") %>
-</p>
+|
 <% if @task.state != State::NEW %>
-<p>
+<% if @task.documentation%>
+
     <b>URL to documentation:</b> <a href="<%= @task.documentation %>"> <%= @task.documentation %></a>
-</p>
+
+<% else %>
+
+    <b>URL to documentation:</b> <%= link_to 'Edit', edit_board_task_path(@board, @task) %> to add link to documentation
+
 <% end %>
-<p>
-	<b>Set task to done:</b>
-	<%= button_to 'Done', done_board_task_path(:board_id => @board, :project => @task), :confirm => 'This will set the status of this task to done. Are you sure?', :method => :done %>
+<% end %>
 </p>
-<p>
+<div class="info">
   <b>Description:</b>
   <%=h @task.description %>
-</p>
-<p>
+</div>
+<div class="info">
   <b>How does this add value:</b>
   <%=h @task.value %>
-</p>
-<p>
+</div>
+<div class="info">
   <b>Consequence if not done:</b>
   <%=h @task.consequence %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_board_task_path(@board, @task) %> |
+
+<%= link_to 'Edit Task', edit_board_task_path(@board, @task) %> |
 <%= link_to 'Back to Board', board_path(@board) %> |
+<hr/>
+<p>
+	<b>Task completed?</b><br/> 
+	Set task to done: <%= button_to 'Done', done_board_task_path(:board_id => @board, :project => @task), :confirm => 'This will set the status of this task to done. Are you sure?', :method => :done %> 
+</p>
+<hr/> 
+<b>No longer relevant?</b> Delete this task: <%= link_to 'Destroy', board_task_path(@board, @task), :confirm => 'Are you sure?', :method => :delete %>
