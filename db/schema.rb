@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100903205027) do
+ActiveRecord::Schema.define(:version => 20100906191550) do
 
   create_table "boards", :force => true do |t|
     t.string   "name"
@@ -37,11 +37,12 @@ ActiveRecord::Schema.define(:version => 20100903205027) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "board_id"
-    t.integer  "state",       :default => 0
-    t.boolean  "project",     :default => false
+    t.integer  "state",         :default => 0
+    t.boolean  "project",       :default => false
     t.string   "value"
     t.string   "consequence"
     t.string   "requester"
+    t.string   "documentation"
   end
 
 end

@@ -9,6 +9,12 @@
     Requested by (who to contact):<br />
     <%= f.text_field :requester %>
   </p>
+<% if @task.state != State::NEW %>
+<p>
+    URL to documentation:<br />
+    <%= f.text_field :documentation %>
+</p>
+<% end%>
 <div class="wrapper">
 <div class="inputbox">
     <%= f.label :description %><br />
