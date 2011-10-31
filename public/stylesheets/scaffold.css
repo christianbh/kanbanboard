@@ -46,6 +46,11 @@ h2, h3 {
 	float: right;
 	padding: 1px;
 }
+.donebox {
+	width: 80%;
+	float: right;
+	padding: 1px;
+}
 
 .floatright {
 	float: right;

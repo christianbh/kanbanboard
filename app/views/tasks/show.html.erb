@@ -39,10 +39,12 @@
 
 <%= link_to 'Edit Task', edit_board_task_path(@board, @task) %> |
 <%= link_to 'Back to Board', board_path(@board) %> |
+<% if @task.state == State::DONE %>
 <hr/>
 <p>
-	<b>Task completed?</b><br/> 
-	Set task to done: <%= button_to 'Done', done_board_task_path(:board_id => @board, :project => @task), :confirm => 'This will set the status of this task to done. Are you sure?', :method => :done %> 
+	<b>Restore Task?</b><br/> 
+	Restore this task and move it to the backlog: <%= button_to 'Done', in_backlog_board_task_path(:board_id => @board, :project => @task), :confirm => 'This will move this task to the backlog. Are you sure?', :method => :in_backlog %> 
 </p>
+<% end %>
 <hr/> 
-<b>No longer relevant?</b> Delete this task: <%= link_to 'Destroy', board_task_path(@board, @task), :confirm => 'Are you sure?', :method => :delete %>
+<b>No longer relevant?</b> Delete this task: <%= link_to 'Destroy', board_task_path(@board, @task), :confirm => 'This will permanently delete this task, and can not be undone. Are you sure?', :method => :delete %>

@@ -11,7 +11,7 @@
 			<h2>
 				Sugggested
 			</h2>
-			<h3> Projects</h3>
+			<h3> Development projects</h3>
 			<%if @board.max_projects <= @new_projects.size%>
 			<div class="roundedcornr_box warning_box">
 				<div class="roundedcornr_content"> 
@@ -20,7 +20,7 @@
 			</div>
 			<%end%>
 			<%= render :partial => "project", :collection => @new_projects%>
-			<h3>Small Tasks</h3>
+			<h3>PM Tasks</h3>
 			<%if @board.max_tasks <= @new_tasks.size%>
 			<div class="roundedcornr_box warning_box">
 				<div class="roundedcornr_content"> 
@@ -46,11 +46,11 @@
 					In work
 				</h2>
 				<h3>
-					Projects
+					Development projects
 				</h3>
 				<%= render :partial => "project", :collection => @in_work_projects%>
 				<h3>
-					Small Tasks
+					PM Tasks
 				</h3>
 				<%=render :partial => "project", :collection => @in_work_tasks %>
 			</div>
@@ -70,10 +70,10 @@
 				Prioritized
 			</h2>
 			<h3>
-				Projects
+				Development projects
 			</h3><%=render :partial => "project", :collection => @prioritized_projects %>
 			<h3>
-				Small Tasks
+				PM Tasks
 			</h3><%=render :partial => "project", :collection => @prioritized_tasks %>
 			</div>
 			<%= drop_receiving_element('droppzone_prioritized',
@@ -84,6 +84,24 @@
 			  :complete => "window.location.reload()"
 			)%>
 		</div>
+		</div>
+		<div style="clear: right"></div>
+		<div class="donebox">
+			<div class="board">
+			<div class="droppzone" id="droppzone_done">
+				<h2>
+					Done
+				</h2>
+				<h3> Drop task here when task / project is completed </h3>
+			</div>
+			</div>
+			<%= drop_receiving_element('droppzone_done',
+			  :accept => 'roundedcornr_box',
+			  :hoverclass => "hover",
+			  :with => "'project=' + (element.id.split('_').last())",
+			  :url => done_board_task_path(:board_id => @board),
+			  :complete => "window.location.reload()"
+			)%>
 		</div>
 		<div style="clear: right"></div>
 		<div class="calendar" id="my-timeline"></div>
